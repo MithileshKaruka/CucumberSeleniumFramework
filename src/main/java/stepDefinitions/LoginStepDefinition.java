@@ -21,7 +21,7 @@ public class LoginStepDefinition{
 	
 	 @Given("^user is already on Login Page$")
 	 public void user_already_on_login_page(){
-	 System.setProperty("webdriver.chrome.driver","/softwares/Automation Testing/Selenium Cucumber BDD/Drivers/chromedriver.exe");
+	 System.setProperty("webdriver.chrome.driver","/src/main/java/chromedriver.exe");
 	 driver = new ChromeDriver();
 	 driver.get("https://www.freecrm.com/index.html");
 	 }
