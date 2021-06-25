@@ -1,42 +1,43 @@
-//package stepDefinitions;
-//
-//import org.openqa.selenium.By;
-//import org.openqa.selenium.JavascriptExecutor;
-//import org.openqa.selenium.Point;
-//import org.openqa.selenium.WebDriver;
-//import org.openqa.selenium.WebElement;
-//import org.openqa.selenium.chrome.ChromeDriver;
-//import org.openqa.selenium.interactions.Actions;
-//
-//import cucumber.api.java.en.Given;
-//import cucumber.api.java.en.Then;
-//import cucumber.api.java.en.When;
-//import junit.framework.Assert;
-//
-//public class LoginStepDefinition{
-//
-//	 WebDriver driver;
-//
-//	
-//	 @Given("^user is already on Login Page$")
-//	 public void user_already_on_login_page(){
-//	 System.setProperty("webdriver.chrome.driver","/Users/naveenkhunteta/Downloads/chromedriver");
-//	 driver = new ChromeDriver();
-//	 driver.get("https://www.freecrm.com/index.html");
-//	 }
-//	
-//	
-//	 @When("^title of login page is Free CRM$")
-//	 public void title_of_login_page_is_free_CRM(){
-//	 String title = driver.getTitle();
-//	 System.out.println(title);
-//	 Assert.assertEquals("#1 Free CRM for Any Business: Online Customer Relationship Software", title);
-//	 }
-//	
-//	 //Reg Exp:
-//	 //1. \"([^\"]*)\"
-//	 //2. \"(.*)\"
-//	
+package stepDefinitions;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Point;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+
+
+import junit.framework.Assert;
+
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+public class LoginStepDefinition{
+
+	 WebDriver driver;
+
+	
+	 @Given("^user is already on Login Page$")
+	 public void user_already_on_login_page(){
+	 System.setProperty("webdriver.chrome.driver","/softwares/Automation Testing/Selenium Cucumber BDD/Drivers/chromedriver.exe");
+	 driver = new ChromeDriver();
+	 driver.get("https://www.freecrm.com/index.html");
+	 }
+	
+	
+	 @When("^title of login page is Free CRM$")
+	 public void title_of_login_page_is_free_CRM(){
+	 String title = driver.getTitle();
+	 System.out.println(title);
+	 Assert.assertEquals("#1 Free CRM customer relationship management software cloud", title);
+	 }
+	
+	 //Reg Exp:
+	 //1. \"([^\"]*)\"
+	 //2. \"(.*)\"
+	
 //	 @Then("^user enters \"(.*)\" and \"(.*)\"$")
 //	 public void user_enters_username_and_password(String username, String password){
 //	 driver.findElement(By.name("username")).sendKeys(username);
@@ -76,14 +77,14 @@
 //		 driver.findElement(By.id("company_position")).sendKeys(position);
 //		 driver.findElement(By.xpath("//input[@type='submit' and @value='Save']")).click();
 //	 }
-//	 
-//
-//	 @Then("^Close the browser$")
-//	 public void close_the_browser(){
-//		 driver.quit();
-//	 }
-//	
-//	
-//	
-//
-//}
+	 
+
+	 @Then("^Close the browser$")
+	 public void close_the_browser(){
+		 driver.quit();
+	 }
+	
+	
+	
+
+}
